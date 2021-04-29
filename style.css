@@ -95,6 +95,28 @@ body {
     "description description";
 }
 
+.card.purple {
+    grid-area: purple;
+}
+
+.card.gray {
+    grid-area: gray;
+}
+
+.card.white-tall {
+    grid-area: white-tall;
+}
+
+.card.dark-gray {
+    grid-area: dark-gray;
+}
+
+.card.white-small {
+    grid-area: white-small;
+}
+
+
+
 .card img {
     grid-area: img;
 }
@@ -111,3 +133,16 @@ body {
     grid-area: description;
 }
 
+
+@media (min-width: 1440px) {
+    .wrapper {
+        width: min(90%, 1200px);
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(2, 50%);
+        grid-template-areas:
+        "purple purple gray white-tall"
+        "white-small dark-gray dark-gray white-tall";
+    }
+}
