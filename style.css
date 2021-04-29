@@ -1,0 +1,106 @@
+:root {
+--clr-4: hsl(263, 55%, 52%);
+--clr-5: hsl(217, 19%, 35%);
+--clr-6: hsl(219, 29%, 14%);
+--clr-1: hsl(0, 0%, 100%);
+--clr-3: hsl(0, 0%, 81%);
+--clr-2: hsl(210, 46%, 95%);
+
+--fs: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 0 0;
+}
+
+img {
+    display: block;
+}
+
+/*  */
+
+body {
+    margin: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: var(--fs);
+}
+
+.wrapper {
+    width: min()
+}
+
+/* cards */
+.card {
+    color: var(--fg);
+    background-color: var(--bg);
+    padding: 1.5rem;
+}
+
+.card .description {
+    opacity: .7;
+}
+
+.card .name span {
+    opacity: .5;
+}
+
+.card img {
+    border-radius: 50%;
+    outline: 1px solid red;
+    width: 40px;
+}
+
+.purple {
+    --fg:var(--clr-1);
+    --bg: var(--clr-4);
+}
+
+.gray {
+    --fg:var(--clr-1);
+    --bg: var(--clr-5);
+}
+
+.white {
+    --fg:var(--clr-6);
+    --bg:var(--clr-1);
+}
+
+.dark-gray {
+    --fg:var(--clr-1);
+    --bg:var(--clr-6);
+}
+
+/* grid */
+.card {
+   align-items: center;
+
+    display: grid;
+    gap: 2em 1em;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+    "img name"
+    "heading heading"
+    "description description";
+}
+
+.card img {
+    grid-area: img;
+}
+
+.card .name {
+    grid-area: name;
+}
+
+.card .heading {
+    grid-area: heading;
+}
+
+.card .description {
+    grid-area: description;
+}
+
