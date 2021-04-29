@@ -133,6 +133,20 @@ body {
     grid-area: description;
 }
 
+@media (min-width: 768px) {
+    .wrapper {
+        width: min(90%, 800px);
+        display:grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(4, 25%);
+        grid-template-areas: 
+        "purple purple"
+        "gray white-tall"
+        "white-small white-tall"
+        "dark-gray dark-gray";
+    }
+}
 
 @media (min-width: 1440px) {
     .wrapper {
@@ -146,3 +160,4 @@ body {
         "white-small dark-gray dark-gray white-tall";
     }
 }
+
