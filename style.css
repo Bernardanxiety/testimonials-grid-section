@@ -28,6 +28,7 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: var(--fs);
     background-color:var(--clr-2);
+    padding:4rem 1rem;
 }
 
 .wrapper {
@@ -48,6 +49,7 @@ body {
 
 .card .description {
     opacity: .7;
+    line-height: 1.5;
 }
 
 .card .name span {
